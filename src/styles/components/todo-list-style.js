@@ -12,6 +12,10 @@ export const container = (...props) => {
     gap: 2rem;
     background-color: ${theme.bgColor};
 
+    @media ${device.tablet} {
+      margin-bottom: 2rem;
+    }
+
     & .card {
       min-width: 350px;
       max-width: 350px;
@@ -57,15 +61,20 @@ export const container = (...props) => {
         }
       }
     }
+  `;
+};
 
-    & .footer-fixed {
-      background-color: ${theme.bgCard};
-      color: ${theme.textColor};
-      padding: 10px;
-      text-align: center;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-    }
+export const footerFixed = (...props) => {
+  const [theme] = props;
+
+  return css`
+    position: fixed;
+    background-color: ${theme.bgCard};
+    color: ${theme.textColor};
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
   `;
 };

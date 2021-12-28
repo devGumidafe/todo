@@ -3,7 +3,7 @@ import { TodoItem } from "./TodoItem";
 import { useNoteContext } from "../context/NoteProvider";
 import { useThemeContext } from "../context/ThemeProvider";
 import { List, Card, CardActions, CardContent } from "@mui/material";
-import { container } from "../../styles/components/todo-list-style";
+import { container, footerFixed } from "../../styles/components/todo-list-style";
 import { FooterButtons } from "./FooterButtons";
 
 export const TodoList = () => {
@@ -27,6 +27,7 @@ export const TodoList = () => {
   };
 
   return (
+    <>
     <div className={container(theme)}>
       <Card className="card">
         <CardContent sx={{ padding: "0" }}>
@@ -48,11 +49,12 @@ export const TodoList = () => {
         </CardActions>
       </Card>
 
-      <Card>
+      <Card sx={{marginBottom:'5rem'}}>
         <FooterButtons typeStyle="small" setState={setState} />
       </Card>
+    </div>
 
-      <footer className="footer-fixed">
+      <footer className={footerFixed(theme)}>
         Create by Gumidev. Code on{" "}
         <a
           className="link"
@@ -63,6 +65,6 @@ export const TodoList = () => {
         </a>
         .
       </footer>
-    </div>
+    </>
   );
 };

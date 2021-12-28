@@ -25,7 +25,6 @@ return css`
 export const styleSmall = (...props) => {
   const [theme] = props;
 
-
 return css`
   display: flex;
   justify-content: center;
