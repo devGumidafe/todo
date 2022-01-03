@@ -21,7 +21,7 @@ export const container = (...props) => {
       max-width: 350px;
       background-color: ${theme.bgCard};
       color: ${theme.textColor};
-      margin-top: -2rem;
+      margin-top: 2rem;
 
       @media ${device.tablet} {
         width: 100%;

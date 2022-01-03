@@ -45,7 +45,7 @@ export const Header = () => {
         sx={{ input: { color: `${theme.textColor}` } }}
         color="secondary"
         inputProps={{ autoComplete: "off" }}
-        InputLabelProps={{ shrink: true, style: { color: `${theme.primary}` } }}
+        InputLabelProps={{ shrink: true, style: { color: `${theme.primary}` }, disableAnimation: true }}
       />
     </ChangeTheme>
   );
