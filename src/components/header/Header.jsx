@@ -31,7 +31,7 @@ export const Header = () => {
       setNewNote(initialNote);
     }
   };
-  
+
   return (
     <ChangeTheme>
       <TextField
@@ -44,7 +44,8 @@ export const Header = () => {
         onChange={handleChange}
         sx={{ input: { color: `${theme.textColor}` } }}
         color="secondary"
-        inputProps={{autocomplete: "off"}}
+        inputProps={{ autoComplete: "off" }}
+        InputLabelProps={{ shrink: true, style: { color: `${theme.primary}` } }}
       />
     </ChangeTheme>
   );
